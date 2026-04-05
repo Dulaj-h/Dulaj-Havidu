@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diyakawa</title>
+
+<style>
+body {
+    font-family: Arial;
+    background:#050505;
+    color:rgb(255, 255, 255);
+    margin:0;
+}
+
+/* NAVBAR */
+.navbar {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#020617;
+    padding:15px;
+    position: sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar button {
+    background:#1e293b;
+    border:none;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.navbar button:hover,
+.navbar button.active {
+    background:#38bdf8;
+    color:black;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BACK BUTTON */
+a {
+    color:#38bdf8;
+    text-decoration: none;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MAIN LAYOUT */
+.project-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* RIGHT SIDE */
+.right {
+    flex: 1;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+.video-container {
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* HIDE SECTIONS */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <button class="active" onclick="showSection('d1', this)">Diyakawa 1.0</button>
+    <button onclick="showSection('d2', this)">Diyakawa 2.0</button>
+</div>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<!-- ================== DIYAKAWA 1.0 ================== -->
+<div id="d1" class="section active">
+
+<h1>Diyakawa 1.0</h1>
+
+<div class="project-container">
+
+<div class="left">
+
+<div class="card">
+<p>
+A autonomous underwater vehicle developed for the SAUVC 2024 competition, focusing on fundamental underwater navigation, control, and system integration. The system was designed using cost-effective components to validate core functionalities such as mobility, sensing, and basic mission execution.
+</p>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>6 DOF underwater mobility using brushed DC thrusters</li>
+<li>PVC + steel hybrid structure with waterproofing</li>
+<li>Raspberrypi and Pre-built image processing</li>
+<li>Arduino-based control system with IMU and magnetometer</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Achievements</h2>
+<ul>
+<li>Qualified among top 42 teams out of 103 via video submission</li>
+<li>Selected into top 21 finalists</li>
+<li>Achieved 11th place overall at SAUVC 2024</li>
+</ul>
+</div>
+
+<div class="gallery">
+<img src="../images/diyakawa2.jpeg">
+<img src="../images/diyakawa3.jpeg">
+</div>
+
+<div class="video-container">
+<video controls>
+<source src="../videos/diyakawa2.mp4">
+</video>
+</div>
+
+</div>
+
+<div class="right">
+<div class="video-container">
+<video controls>
+<source src="../videos/diyakawa1.mp4">
+</video>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ================== DIYAKAWA 2.0 ================== -->
+<div id="d2" class="section">
+
+<h1>Diyakawa 2.0</h1>
+
+<div class="project-container">
+
+<div class="left">
+
+<div class="card">
+<p>
+An advanced and improved version of the Diyakawa platform, developed by addressing the limitations of Diyakawa 1.0. This system focuses on full autonomy, robustness, and high-performance underwater operation, integrating modern robotics frameworks and optimized mechanical design.
+</p>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Brushless thrusters</li>
+<li>ROS2-based architecture with jetson nano</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Achievements</h2>
+<ul>
+<li>Improved system performance</li>
+<li>Achieved 10th place overall at SAUVC 2025</li>
+</ul>
+</div>
+
+
+
+
+
+</div>
+
+<div class="right">
+<div class="gallery">
+<img src="../images/diyakawa4.jpeg">
+<img src="../images/diyakawa5.png">
+</div>
+
+<div class="video-container">
+<video controls>
+<source src="../videos/diyakawa3.mp4">
+</video>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function showSection(id, btn) {
+    // hide all
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+    });
+
+    // remove active button
+    document.querySelectorAll('.navbar button').forEach(b => {
+        b.classList.remove('active');
+    });
+
+    // show selected
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>

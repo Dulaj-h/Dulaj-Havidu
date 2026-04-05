@@ -1,30 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amphibious Robot Project</title>
+
 <style>
-body { font-family: Arial; background:#0f172a; color:white; padding:20px;}
-a { color:#38bdf8; }
+body {
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BACK BUTTON */
+a {
+    color:#38bdf8;
+    text-decoration: none;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MAIN LAYOUT */
+.project-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE (TEXT) */
+.left {
+    flex: 1;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* RIGHT SIDE (MEDIA) */
+.right {
+    flex: 1;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+.video-container {
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <a href="../index.html">⬅ Back to Home</a>
 
-<h1>Project Title</h1>
+<h1>Amphibious Robot for Wildlife Exploration</h1>
 
-<p><b>Description:</b></p>
-<p>
-Write your project description here.
-</p>
+<div class="project-container">
 
-<p><b>Technologies Used:</b></p>
-<ul>
-<li>Python</li>
-<li>OpenCV</li>
-<li>Arduino</li>
-</ul>
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <div class="card">
+            <p>
+            A mobile robotic system designed for wildlife exploration capable of navigating 
+            ground terrains, shallow water, and aerial environments. The system enables 
+            remote monitoring without disturbing natural habitats.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Ground + aquatic mobility (tracks & thrusters)</li>
+                <li>Detachable aerial drone for extended coverage</li>
+                <li>Real-time video streaming & remote control</li>
+                <li>Operates in muddy, sandy, and shallow water</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Design & Engineering</h2>
+            <ul>
+                <li>Tracked locomotion with suspension system</li>
+                <li>Aluminum chassis (lightweight & strong)</li>
+                <li>High torque motor selection</li>
+                <li>Validated using ANSYS & ADAMS</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <!-- GALLERY -->
+        <div class="gallery">
+            <img src="../images/amphi1.jpeg">
+            <img src="../images/amphi2.jpeg">
+            <img src="../images/amphi3.jpg">
+            <img src="../images/amphi4.jpg">
+        </div>
+
+        <!-- VIDEO -->
+        <div class="video-container">
+            <video controls>
+                <source src="../videos/amphibious.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
 
 </body>
 </html>

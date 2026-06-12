@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automated ACB Re-powering System</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.project-container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:1;
+}
+
+.right{
+    flex:1;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-top:0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-container{
+    margin-top:15px;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech span{
+    background:#334155;
+    padding:8px 12px;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+    .project-container{
+        flex-direction:column;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<h1>Automated ACB Re-powering System Using PLC</h1>
+
+<div class="project-container">
+
+<!-- LEFT SECTION -->
+
+<div class="left">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+The Automated ACB Re-powering System is an industrial automation solution
+developed for Colombo International Container Terminals (CICT) to restore
+electrical power automatically after power disturbances. The system uses a
+PLC-controlled motorized mechanism to reclose Air Circuit Breakers (ACBs)
+without requiring manual intervention, significantly reducing recovery time
+and improving operational continuity within the E-RTG container yard.
+</p>
+</div>
+
+<div class="card">
+<h2>Problem Statement</h2>
+<p>
+CICT's E-RTG yard receives power through a DC 680V bus bar system and
+multiple Masterpact NT Air Circuit Breakers. During power sags or outages,
+converter stations trip and all ACBs open as a protective measure. Restoring
+power requires technicians to manually reclose each breaker, which can result
+in lengthy operational interruptions and reduced terminal productivity.
+The objective of this project was to automate the re-powering process and
+minimize downtime following electrical disturbances.
+</p>
+</div>
+
+<div class="card">
+<h2>System Architecture</h2>
+<ul>
+<li>Power interruption causes the converter station to trip.</li>
+<li>ACBs open automatically to protect the electrical system.</li>
+<li>PLC monitors system status and initiates recovery logic.</li>
+<li>A motorized actuation mechanism performs breaker reclosing.</li>
+<li>Control logic verifies safe operating conditions.</li>
+<li>Power is restored automatically with minimal human intervention.</li>
+<li>System status can be monitored through the control panel.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Automatic ACB re-powering after power failures.</li>
+<li>PLC-based control and decision making.</li>
+<li>Motorized breaker operation mechanism.</li>
+<li>Reduced manual maintenance effort.</li>
+<li>Improved operational availability.</li>
+<li>Safe and reliable recovery sequence.</li>
+<li>Scalable architecture for large electrical systems.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Technologies Used</h2>
+
+<div class="tech">
+<span>Siemens LOGO! PLC</span>
+<span>Industrial Automation</span>
+<span>Motor Control</span>
+<span>Electrical Protection Systems</span>
+<span>Control Logic</span>
+<span>Circuit Design</span>
+<span>Industrial Maintenance</span>
+<span>Power Distribution</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Engineering Challenges</h2>
+<ul>
+<li>Ensuring safe automatic breaker operation.</li>
+<li>Developing reliable PLC control logic for power restoration.</li>
+<li>Integrating motorized mechanisms with existing ACB infrastructure.</li>
+<li>Maintaining electrical safety and protection requirements.</li>
+<li>Minimizing recovery time without compromising system reliability.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Results & Impact</h2>
+<p>
+The automated re-powering system significantly reduces downtime following
+power disturbances by eliminating the need for manual breaker reclosing.
+The solution improves terminal productivity, increases equipment
+availability, and enhances the reliability of electrical power restoration
+within the E-RTG yard. The project demonstrates the effective application
+of PLC-based automation in critical industrial power systems.
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT SECTION -->
+
+<div class="right">
+
+<div class="gallery">
+<img src="../images/acb1.jpg" alt="ACB System">
+<img src="../images/acb2.jpg" alt="PLC Control Panel">
+<img src="../images/acb3.jpg" alt="Motorized Mechanism">
+<img src="../images/acb4.jpg" alt="Installation Site">
+</div>
+
+<div class="video-container">
+<video controls>
+<source src="../videos/acb_repowering.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="card">
+<h2>Project Highlights</h2>
+
+<ul>
+<li>Industrial PLC-based power restoration system.</li>
+<li>Automated operation of high-power electrical equipment.</li>
+<li>Improved operational continuity in container terminal operations.</li>
+<li>Reduced manual intervention and recovery time.</li>
+<li>Enhanced reliability of electrical infrastructure.</li>
+<li>Practical application of automation in critical power systems.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

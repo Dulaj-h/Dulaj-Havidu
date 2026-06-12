@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oil Automation System</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.project-container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:1;
+}
+
+.right{
+    flex:1;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-top:0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-container{
+    margin-top:15px;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech span{
+    background:#334155;
+    padding:8px 12px;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+    .project-container{
+        flex-direction:column;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<h1>Oil Automation System</h1>
+
+<div class="project-container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+The Oil Automation System is an industrial automation solution used to
+manage and monitor oil distribution for equipment maintenance operations
+at Colombo International Container Terminals (CICT). The system combines
+PLC control, load-cell measurement, barcode identification, HMI interfaces,
+and automated dispensing mechanisms to ensure accurate, secure, and
+traceable oil distribution while minimizing manual intervention.
+</p>
+</div>
+
+<div class="card">
+<h2>Problem Statement</h2>
+<p>
+Large-scale container terminal operations require frequent lubrication and
+oil distribution for maintenance activities. Traditional manual issuing
+methods can lead to inaccurate measurements, poor record keeping, delays,
+and potential misuse of resources. The objective of this project was to
+develop an automated system capable of accurately dispensing oil while
+maintaining complete tracking and accountability throughout the process.
+</p>
+</div>
+
+<div class="card">
+<h2>System Workflow</h2>
+<ul>
+<li>Maintenance personnel submit an oil request.</li>
+<li>Warehouse issues a barcode containing transaction information.</li>
+<li>Barcode is scanned at the dispensing station.</li>
+<li>PLC verifies the request and authorizes dispensing.</li>
+<li>Load cells continuously measure the dispensed quantity.</li>
+<li>Oil distribution is automatically controlled and monitored.</li>
+<li>Transaction data is recorded for future reference and auditing.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>System Components</h2>
+<ul>
+<li>Delta PLC for process control and automation.</li>
+<li>Load cell system for precise quantity measurement.</li>
+<li>Human Machine Interface (HMI) for monitoring and operation.</li>
+<li>Barcode scanner for identification and authorization.</li>
+<li>Thermal printer for barcode generation and transaction records.</li>
+<li>Automated dispensing and monitoring hardware.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Automated oil dispensing process.</li>
+<li>Accurate quantity measurement using load cells.</li>
+<li>Barcode-based tracking and authorization.</li>
+<li>Real-time monitoring through HMI.</li>
+<li>Digital record keeping and data storage.</li>
+<li>Improved accountability and resource management.</li>
+<li>Enhanced reliability and operational efficiency.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Technologies Used</h2>
+
+<div class="tech">
+<span>Delta PLC</span>
+<span>HMI</span>
+<span>Load Cell</span>
+<span>Barcode System</span>
+<span>Thermal Printer</span>
+<span>Industrial Automation</span>
+<span>Sensors</span>
+<span>Process Control</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Engineering Challenges</h2>
+<ul>
+<li>Maintaining high dispensing accuracy under varying operating conditions.</li>
+<li>Ensuring reliable communication between system components.</li>
+<li>Achieving robust barcode reading and transaction verification.</li>
+<li>Providing secure and traceable oil distribution records.</li>
+<li>Designing a user-friendly interface for maintenance personnel.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Results & Impact</h2>
+<p>
+The Oil Automation System significantly improves maintenance operations by
+providing accurate and automated oil dispensing with complete transaction
+tracking. The solution enhances operational efficiency, reduces manual
+errors, improves inventory accountability, and supports better resource
+management within terminal maintenance activities.
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right">
+
+<div class="gallery">
+<img src="../images/oil1.jpg" alt="Oil Automation System">
+<img src="../images/oil2.jpg" alt="HMI Interface">
+<img src="../images/oil3.jpg" alt="Barcode System">
+<img src="../images/oil4.jpg" alt="Dispensing Unit">
+</div>
+
+<div class="video-container">
+<video controls>
+<source src="../videos/oil_automation.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="card">
+<h2>Project Highlights</h2>
+
+<ul>
+<li>Industrial PLC-based automation system.</li>
+<li>Integrated barcode identification and tracking.</li>
+<li>Automated dispensing with precise measurement.</li>
+<li>Real-time monitoring and reporting capabilities.</li>
+<li>Designed for critical maintenance operations in a container terminal.</li>
+<li>Improved operational efficiency and resource accountability.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

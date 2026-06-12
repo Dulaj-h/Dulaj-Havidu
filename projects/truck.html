@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truck Alignment System</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.project-container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:1;
+}
+
+.right{
+    flex:1;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-top:0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-container{
+    margin-top:15px;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech span{
+    background:#334155;
+    padding:8px 12px;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+    .project-container{
+        flex-direction:column;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<h1>Truck Alignment System</h1>
+
+<div class="project-container">
+
+<!-- LEFT SECTION -->
+
+<div class="left">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+The Truck Alignment System is a computer vision-based solution developed to
+assist container terminal operators in accurately positioning trucks during
+loading and unloading operations. Improper truck alignment can increase crane
+cycle times, reduce operational efficiency, and create safety risks.
+The system automatically detects the truck position using a camera and
+provides real-time alignment guidance to the driver through an external display
+system.
+</p>
+</div>
+
+<div class="card">
+<h2>Problem Statement</h2>
+<p>
+At container terminals, trucks must stop at precise locations to allow cranes
+to safely pick up or place containers. Manual alignment depends heavily on
+driver skill and often results in positioning errors, causing delays and
+additional crane movements. The objective of this project was to develop an
+automated system capable of continuously monitoring truck position and guiding
+drivers toward the correct alignment position.
+</p>
+</div>
+
+<div class="card">
+<h2>System Architecture</h2>
+<ul>
+<li>Industrial camera captures real-time video of incoming trucks.</li>
+<li>NVIDIA Jetson processes image data using computer vision algorithms.</li>
+<li>YOLO object detection identifies and tracks the truck.</li>
+<li>Distance and offset calculations determine alignment accuracy.</li>
+<li>Arduino controls the external LED display system.</li>
+<li>Ethernet communication enables fast data exchange between Jetson and Arduino.</li>
+<li>Drivers receive alignment instructions through a visual display interface.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Real-time truck detection and tracking.</li>
+<li>Automatic lane identification.</li>
+<li>Precise alignment guidance for drivers.</li>
+<li>Low-latency image processing using Jetson.</li>
+<li>Multi-threaded software architecture.</li>
+<li>Reliable Ethernet communication.</li>
+<li>User-friendly operator display system.</li>
+<li>Scalable design for multiple lanes.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Technologies Used</h2>
+
+<div class="tech">
+<span>Python</span>
+<span>YOLO</span>
+<span>OpenCV</span>
+<span>NVIDIA Jetson</span>
+<span>Arduino Uno</span>
+<span>Ethernet Communication</span>
+<span>Multithreading</span>
+<span>Computer Vision</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Engineering Challenges</h2>
+<ul>
+<li>Maintaining accurate truck detection under varying lighting conditions.</li>
+<li>Achieving real-time performance while processing video streams.</li>
+<li>Ensuring reliable communication between Jetson and Arduino.</li>
+<li>Handling different truck sizes and vehicle positions.</li>
+<li>Reducing latency between detection and display updates.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Results & Impact</h2>
+<p>
+The developed system provides real-time alignment guidance, reducing driver
+positioning errors and improving operational efficiency during container
+handling operations. The solution demonstrates the practical application of
+computer vision and embedded systems in port automation and smart logistics.
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT SECTION -->
+
+<div class="right">
+
+<div class="gallery">
+<img src="../images/truck1.jpg" alt="Truck Alignment System">
+<img src="../images/truck2.jpg" alt="YOLO Detection">
+<img src="../images/truck3.jpg" alt="Display Unit">
+<img src="../images/truck4.jpg" alt="System Installation">
+</div>
+
+<div class="video-container">
+<video controls>
+<source src="../videos/truck_alignment.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="card">
+<h2>Project Highlights</h2>
+
+<ul>
+<li>Computer vision-based industrial automation project.</li>
+<li>Integrated Jetson and Arduino platforms.</li>
+<li>Real-time object detection using YOLO.</li>
+<li>Designed for deployment in container terminal environments.</li>
+<li>Supports safe and efficient truck positioning.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

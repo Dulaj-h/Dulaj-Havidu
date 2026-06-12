@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bipedal Robot Project</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.project-container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:1;
+}
+
+.right{
+    flex:1;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+.card h2{
+    color:#38bdf8;
+    margin-top:0;
+}
+
+ul{
+    padding-left:20px;
+    line-height:1.8;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.video-container{
+    margin-top:15px;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+.tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tech span{
+    background:#334155;
+    padding:8px 12px;
+    border-radius:20px;
+}
+
+@media(max-width:768px){
+    .project-container{
+        flex-direction:column;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<h1>Design and Development of a Bipedal Robot</h1>
+
+<div class="project-container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="card">
+<h2>Project Overview</h2>
+<p>
+The Bipedal Robot project focuses on the design and development of a
+two-legged robotic platform capable of achieving stable locomotion,
+maintaining balance, climbing stairs, and transporting small payloads.
+The project combines mechanical design, kinematic and dynamic analysis,
+control systems, embedded electronics, and sensor integration to emulate
+human walking behavior. The robot was developed as a multidisciplinary
+mechatronics project involving simulation, structural analysis, actuator
+selection, and motion control.
+</p>
+</div>
+
+<div class="card">
+<h2>Problem Statement</h2>
+<p>
+Most mobile robots rely on wheels for movement, which limits their ability
+to navigate environments designed for humans. Bipedal robots can traverse
+stairs, uneven surfaces, and confined spaces more effectively. However,
+maintaining balance and generating stable walking motions present significant
+engineering challenges. The goal of this project was to design a robotic
+system capable of walking stably while carrying loads and adapting to
+real-world terrain conditions.
+</p>
+</div>
+
+<div class="card">
+<h2>Design Requirements</h2>
+<ul>
+<li>Maximum step size of 15 cm.</li>
+<li>Ability to climb stairs with 15 cm step height.</li>
+<li>Payload carrying capacity of 1 kg.</li>
+<li>Stable walking on flat and inclined surfaces.</li>
+<li>Real-time balance monitoring and correction.</li>
+<li>Compact and lightweight mechanical structure.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Mechanical Design</h2>
+<p>
+Each leg consists of four degrees of freedom, including two hip joints,
+one knee joint, and one ankle joint. Link dimensions were determined
+through torque analysis and optimized to satisfy the required walking and
+stair-climbing constraints. Structural components were designed using CAD
+software and validated through Finite Element Analysis (FEA) to ensure
+adequate strength while minimizing weight.
+</p>
+</div>
+
+<div class="card">
+<h2>Kinematic and Dynamic Analysis</h2>
+<p>
+Forward and inverse kinematic models were developed to calculate joint
+motions required for desired foot trajectories. Dynamic analysis was
+performed using MATLAB to evaluate joint torques during walking operations. The resulting torque profiles were used to select
+appropriate actuators capable of delivering the required performance.
+</p>
+</div>
+
+<div class="card">
+<h2>Control System</h2>
+<p>
+The walking controller is based on the inverted pendulum model, which
+provides a simplified representation of bipedal locomotion. Gait planning,
+inverse kinematics, and actuator control are arranged in a hierarchical
+control structure. Stability is monitored using the Zero Moment Point (ZMP)
+criterion, ensuring that the robot remains balanced throughout the walking
+cycle.
+</p>
+</div>
+
+<div class="card">
+<h2>Sensing and Feedback</h2>
+<ul>
+<li>BNO055 9-DOF IMU for orientation estimation.</li>
+<li>Force sensors placed beneath each foot.</li>
+<li>Ground contact monitoring.</li>
+<li>Balance and stability feedback.</li>
+<li>Real-time posture correction.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Hardware Architecture</h2>
+<ul>
+<li>Raspberry Pi Zero as the main controller.</li>
+<li>Dynamixel smart servo motors.</li>
+<li>U2D2 communication interface.</li>
+<li>Force sensing system.</li>
+<li>IMU-based orientation sensing.</li>
+<li>LiPo battery power system.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Key Features</h2>
+<ul>
+<li>Two-legged walking locomotion.</li>
+<li>Real-time balance control.</li>
+<li>ZMP-based stability monitoring.</li>
+<li>Sensor fusion using IMU and force sensors.</li>
+<li>Simulation-driven design process.</li>
+<li>Modular mechanical structure.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Technologies Used</h2>
+
+<div class="tech">
+<span>MATLAB</span>
+<span>Simscape Multibody</span>
+<span>Robotics</span>
+<span>Inverse Kinematics</span>
+<span>Dynamics Analysis</span>
+<span>FEA</span>
+<span>Raspberry Pi</span>
+<span>Dynamixel Servos</span>
+<span>BNO055 IMU</span>
+<span>Force Sensors</span>
+<span>Embedded Systems</span>
+<span>Control Systems</span>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Engineering Challenges</h2>
+<ul>
+<li>Maintaining dynamic stability while walking.</li>
+<li>Generating smooth and stable gait trajectories.</li>
+<li>Selecting actuators capable of delivering required torque.</li>
+<li>Minimizing structural weight while maintaining strength.</li>
+<li>Integrating multiple sensors for balance control.</li>
+
+</ul>
+</div>
+
+<div class="card">
+<h2>Results & Impact</h2>
+<p>
+The project successfully demonstrated the integration of mechanical design,
+robot dynamics, embedded systems, and control engineering within a humanoid
+robotic platform. The developed system validated key principles required for
+stable bipedal locomotion and provided a foundation for future research in
+humanoid robotics, service robots, and autonomous mobility systems.
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right">
+
+<div class="gallery">
+<img src="../images/biped1.png" alt="Bipedal Robot CAD">
+<img src="../images/biped2.png" alt="phototype Design">
+<img src="../images/biped3.png" alt="ADAM Simulation">
+<img src="../images/biped4.png" alt="Circuit Design">
+<img src="../images/biped5.png" alt="Phototype">
+</div>
+
+<div class="video-container">
+            <video controls>
+                <source src="../videos/bipedal_robot.mp4" type="video/mp4">
+            </video>
+        </div>
+
+<div class="card">
+<h2>Project Highlights</h2>
+
+<ul>
+<li>Complete bipedal robot design from concept to prototype.</li>
+<li>4 Degrees of Freedom (DOF) per leg.</li>
+<li>MATLAB-based kinematic and dynamic analysis.</li>
+<li>ZMP-based stability evaluation.</li>
+<li>Force sensor and IMU feedback integration.</li>
+<li>Finite Element Analysis of structural components.</li>
+<li>Smart actuator-based motion control.</li>
+<li>Designed for stair climbing and payload transport.</li>
+<li>Integration of mechanical, electronic, and software systems.</li>
+</ul>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

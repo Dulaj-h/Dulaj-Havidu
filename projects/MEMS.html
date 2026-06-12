@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEMS Tilt Mechanism Project</title>
+
+<style>
+body {
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    margin:0;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* BACK BUTTON */
+a {
+    color:#38bdf8;
+    text-decoration: none;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MAIN LAYOUT */
+.project-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.left {
+    flex: 1;
+}
+
+.card {
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* RIGHT SIDE */
+.right {
+    flex: 1;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+.video-container {
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="../index.html">⬅ Back to Home</a>
+
+<h1>MEMS-Based 2-Axis Tilt Mechanism with Integrated Piezoresistive Sensing</h1>
+
+<div class="project-container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+
+        <div class="card">
+            <p>
+            A microelectromechanical (MEMS) system designed for precise two-axis angular
+            positioning and measurement. The system utilizes electrostatic comb-drive
+            actuators and integrated piezoresistive sensing to provide accurate tilt control
+            and real-time position feedback for microsystem applications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Precise two-axis tilt motion control</li>
+                <li>Integrated piezoresistive sensing for angle feedback</li>
+                <li>Electrostatic vertical comb-drive actuation</li>
+                <li>Compact and low-power MEMS design</li>
+                <li>Suitable for closed-loop positioning applications</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Design & Engineering</h2>
+            <ul>
+                <li>Mirror platform supported by torsion beams</li>
+                <li>Eight electrostatic comb-drive actuators</li>
+                <li>Tilt actuation about both X and Y axes</li>
+                <li>Integrated sensing through strain-induced resistance variation</li>
+                <li>MEMS fabrication process developed for device realization</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Applications</h2>
+            <ul>
+                <li>Optical beam steering and LiDAR systems</li>
+                <li>Biomedical imaging and micro-endoscopy</li>
+                <li>Laser scanning systems</li>
+                <li>Free-space optical communication</li>
+                <li>Precision microsystem positioning platforms</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+
+        <!-- GALLERY -->
+        <div class="gallery">
+            <img src="../images/mems1.png" alt="MEMS Design">
+            <img src="../images/mems2.png" alt="Comb Drive Actuation">
+            <img src="../images/mems3.png" alt="Sensing Implementation">
+            <img src="../images/mems4.png" alt="Results around X axis">
+            <img src="../images/mems5.png" alt="Results around Y axis">
+            <img src="../images/mems6.png" alt="Fabrication Process">
+        </div>
+
+        
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
